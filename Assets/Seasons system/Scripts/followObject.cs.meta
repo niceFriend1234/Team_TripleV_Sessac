@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 291fd159d4f98f64489d2b8c8aa27305
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 227529
+  packageName: Seasons system
+  packageVersion: 1.0
+  assetPath: Assets/Seasons system/Scripts/followObject.cs
+  uploadId: 516714
