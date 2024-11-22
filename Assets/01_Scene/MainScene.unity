@@ -469,7 +469,7 @@ MonoBehaviour:
   autumnMusic: {fileID: 8300000, guid: 2b4d95ea26c767a43b4ecc35437929f1, type: 3}
   winterMusic: {fileID: 8300000, guid: 5a62e212580baad4f8de96a0a63527ca, type: 3}
   audioSource: {fileID: 1372279634}
-  crossfadeDuration: 2
+  crossfadeDuration: 1
 --- !u!4 &1461577106
 Transform:
   m_ObjectHideFlags: 0

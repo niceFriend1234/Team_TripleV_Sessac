@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class AudioMgr : MonoBehaviour
@@ -8,50 +9,26 @@ public class AudioMgr : MonoBehaviour
     [SerializeField] private AudioClip autumnMusic;
     [SerializeField] private AudioClip winterMusic;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private float crossfadeDuration;
     private SeasonsSystemURP.seasons currentSeason;
 
     void Start()
     {
         audioSource.loop = true;
-        SeasonsSystemURP.onSeasonChange += ChangeSeason;
-        PlaySeasonMusic(SeasonsSystemURP.season);
+        SeasonsSystemURP.onSeasonChange += ChangeSeasonMusic;
     }
 
     void OnDestroy()
     {
-        SeasonsSystemURP.onSeasonChange -= ChangeSeason;
+        SeasonsSystemURP.onSeasonChange -= ChangeSeasonMusic;
     }
-
-    private void ChangeSeason(SeasonsSystemURP.seasons newSeason)
+    private async void ChangeSeasonMusic(SeasonsSystemURP.seasons newSeason)
     {
-        if (currentSeason != newSeason)
-        {
-            currentSeason = newSeason;
-            PlaySeasonMusic(newSeason);
-        }
+        AudioClip newClip = GetAudioClipForSeason(newSeason);
+        await CrossfadeMusicAsync(newClip);
     }
 
-    private void PlaySeasonMusic(SeasonsSystemURP.seasons season)
-    {
-        AudioClip clipToPlay = season switch
-        {
-            SeasonsSystemURP.seasons.spring => springMusic,
-            SeasonsSystemURP.seasons.summer => summerMusic,
-            SeasonsSystemURP.seasons.autumn => autumnMusic,
-            SeasonsSystemURP.seasons.winter => winterMusic,
-            _ => null
-        };
-
-        if (clipToPlay != null && audioSource.clip != clipToPlay)
-        {
-            audioSource.clip = clipToPlay;
-            audioSource.Play();
-        }
-    }
-
-    // Optional: Add fade between songs
-    [SerializeField] private float crossfadeDuration = 2.0f;
-    private IEnumerator CrossfadeMusic(AudioClip newClip)
+    private async Task CrossfadeMusicAsync(AudioClip newClip)
     {
         float timeElapsed = 0;
         float startVolume = audioSource.volume;
@@ -61,19 +38,42 @@ public class AudioMgr : MonoBehaviour
         {
             timeElapsed += Time.deltaTime;
             audioSource.volume = Mathf.Lerp(startVolume, 0, timeElapsed / crossfadeDuration);
-            yield return null;
+            await Task.Yield();
         }
 
-        // Change clip and fade in
+        // Change the audio clip
         audioSource.clip = newClip;
         audioSource.Play();
+
+        // Reset timer
         timeElapsed = 0;
 
+        // Fade in
         while (timeElapsed < crossfadeDuration)
         {
             timeElapsed += Time.deltaTime;
             audioSource.volume = Mathf.Lerp(0, startVolume, timeElapsed / crossfadeDuration);
-            yield return null;
+            await Task.Yield();
         }
     }
+
+    private AudioClip GetAudioClipForSeason(SeasonsSystemURP.seasons season)
+    {
+
+        switch (season)
+        {
+            case SeasonsSystemURP.seasons.spring:
+                return springMusic;
+            case SeasonsSystemURP.seasons.summer:
+                return summerMusic;
+            case SeasonsSystemURP.seasons.autumn:
+                return autumnMusic;
+            case SeasonsSystemURP.seasons.winter:
+                return winterMusic;
+            default:
+                return null;
+        }
+    }
+
+
 }
