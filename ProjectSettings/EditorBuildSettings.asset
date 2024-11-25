@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/01_Scene/Team_TripleV_Sessac.unity
-    guid: 7c5851e070387684fb143023ebe4ae6c
+    path: Assets/01_Scene/Start.unity
+    guid: 68651599ff1be2842bab3d0323d6f112
   - enabled: 1
-    path: Assets/01_Scene/MainScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/01_Scene/Main.unity
+    guid: de89416162908654ea870a49eed9a5dc
   - enabled: 1
     path: Assets/01_Scene/LayerDesign.unity
     guid: 74feb141676575141bcc49d2210a150f
