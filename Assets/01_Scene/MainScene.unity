@@ -464,10 +464,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d679de0989b7e4386d702490de0f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  springMusic: {fileID: 8300000, guid: a5915cec67783544588d3d82e5f28414, type: 3}
-  summerMusic: {fileID: 8300000, guid: 012a21a60d18b114f8d64fe8296bac69, type: 3}
-  autumnMusic: {fileID: 8300000, guid: 2b4d95ea26c767a43b4ecc35437929f1, type: 3}
-  winterMusic: {fileID: 8300000, guid: 5a62e212580baad4f8de96a0a63527ca, type: 3}
+  springMusic: {fileID: 8300000, guid: 7a65f483fca4c3542b7a4dea1b4d1645, type: 3}
+  summerMusic: {fileID: 8300000, guid: 19c8d3121df7aff46b237a614d6c92cf, type: 3}
+  autumnMusic: {fileID: 8300000, guid: 2c65aaa41105a2a4ca2fbfb668ab5702, type: 3}
+  winterMusic: {fileID: 8300000, guid: ff5e8a632e1c6e74885b718659de26a0, type: 3}
   audioSource: {fileID: 1372279634}
   crossfadeDuration: 1
 --- !u!4 &1461577106
