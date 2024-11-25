@@ -11814,7 +11814,7 @@ GameObject:
   - component: {fileID: 7313901274942800102}
   - component: {fileID: 353383859759032917}
   - component: {fileID: 7078730022525249250}
-  - component: {fileID: 6493918452034144505}
+  - component: {fileID: 1935201221975395805}
   m_Layer: 0
   m_Name: OVRCameraRigInteraction
   m_TagString: Untagged
@@ -11864,7 +11864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _passthroughLayer: {fileID: 6612286830476761286}
---- !u!114 &6493918452034144505
+--- !u!114 &1935201221975395805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11873,11 +11873,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1823197959098612890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a53e7a95b636e34490b0f7a29308585, type: 3}
+  m_Script: {fileID: 11500000, guid: f4fd1938238ae634daab19c1b7799bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _passthroughLayer: {fileID: 6612286830476761286}
-  vrSceneName: LayerDesign
+  ovrCameraRig: {fileID: 1823197959098612890}
+  arSession: {fileID: 707083515697937340, guid: 9f56e0ea6141d0f4aacac65f4fffd96f, type: 3}
+  vrSceneName: MainScene
 --- !u!1 &1823994952906307080
 GameObject:
   m_ObjectHideFlags: 0

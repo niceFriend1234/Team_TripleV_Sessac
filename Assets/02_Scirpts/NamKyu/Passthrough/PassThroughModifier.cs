@@ -20,7 +20,7 @@ public class PassThroughModifier : MonoBehaviour
             return;
         }
 
-        _passthroughLayer.SetBrightnessContrastSaturation(-0.3f, -0.3f, -0.3f);
+        _passthroughLayer.SetBrightnessContrastSaturation(-0.5f, -0.5f, -0.5f);
 
         Debug.Log($"Brightness decreased to 50% - Contrast: {_passthroughLayer.colorMapEditorContrast}, Saturation: {_passthroughLayer.colorMapEditorPosterize}");
     }
