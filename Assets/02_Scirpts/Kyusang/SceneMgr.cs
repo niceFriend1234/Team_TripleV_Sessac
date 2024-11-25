@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneMgr : MonoBehaviour
 {
-    void Start()
+    private void Awake()
     {
         SceneManager.LoadSceneAsync("LayerDesign", LoadSceneMode.Additive);
     }
