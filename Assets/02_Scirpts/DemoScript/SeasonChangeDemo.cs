@@ -9,6 +9,8 @@ public class SeasonChangeDemo : MonoBehaviour
     [SerializeField] private GameObject cloud;
     [SerializeField] private GameObject walls;
     [SerializeField] private GameObject arrow;
+    [SerializeField] private GameObject Spehere;
+    [SerializeField] private GameObject _light;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -78,6 +80,27 @@ public class SeasonChangeDemo : MonoBehaviour
         if (arrow != null)
         {
             arrow.SetActive(false);
+            Debug.Log("arrow deactivated.");
+        }
+        else
+        {
+            Debug.LogWarning("Walls object is not assigned.");
+        }
+
+        
+        if (Spehere != null)
+        {
+            Spehere.SetActive(false);
+            Debug.Log("arrow deactivated.");
+        }
+        else
+        {
+            Debug.LogWarning("Walls object is not assigned.");
+        }
+        
+        if (_light != null)
+        {
+            _light.SetActive(false);
             Debug.Log("arrow deactivated.");
         }
         else
