@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: m_SmoothMotionEnabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4112818082898542890, guid: 7721655a2ec4d214ebb7cb809c37a72a, type: 3}
+      propertyPath: m_RendererIndex
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4275787788214644058, guid: 7721655a2ec4d214ebb7cb809c37a72a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -591,9 +595,17 @@ PrefabInstance:
       propertyPath: m_CameraYOffset
       value: 1.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5357686686861815129, guid: 7721655a2ec4d214ebb7cb809c37a72a, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7344322927826782178, guid: 7721655a2ec4d214ebb7cb809c37a72a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344322927826782178, guid: 7721655a2ec4d214ebb7cb809c37a72a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8544083014236595917, guid: 7721655a2ec4d214ebb7cb809c37a72a, type: 3}
       propertyPath: m_Handedness

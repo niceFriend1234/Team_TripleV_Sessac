@@ -3,10 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GotoMain : MonoBehaviour
 {
-    // 씬 전환 메서드
     public void ChangeToMainScene()
     {
-        // Main Scene으로 이동
-        SceneManager.LoadScene("Main"); // "Main"은 전환하려는 씬 이름
+        SceneManager.LoadScene("Main");
     }
 }

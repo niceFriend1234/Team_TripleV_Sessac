@@ -5235,6 +5235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRCameraRigInteraction
       objectReference: {fileID: 0}
+    - target: {fileID: 1823197959098612890, guid: c3bc572882ea4c14c9eb1a71aa5300c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4228238879866690076, guid: c3bc572882ea4c14c9eb1a71aa5300c5, type: 3}
       propertyPath: '_gameObjects.Array.data[0]'
       value: 

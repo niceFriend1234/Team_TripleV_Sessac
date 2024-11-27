@@ -8,7 +8,7 @@ public class GotoMainScene : MonoBehaviour
     [SerializeField] private GameObject ovrCameraRig; // 기존 OVRCameraRig (MR용)
     [SerializeField] private ARSession arSession; // ARSession 참조
 
-    public string vrSceneName = "MainScene"; // VR 씬 이름 설정
+    public string vrSceneName = "VRTest"; // VR 씬 이름 설정
 
     // 싱글턴 참조
     public static GotoMainScene Instance { get; private set; }
