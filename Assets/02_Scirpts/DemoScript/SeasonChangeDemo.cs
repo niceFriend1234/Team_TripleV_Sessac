@@ -67,7 +67,7 @@ public class SeasonChangeDemo : MonoBehaviour
 
         if (walls != null)
         {
-            walls.SetActive(false); // walls 오브젝트 비활성화
+            walls.SetActive(false);
             Debug.Log("Walls deactivated.");
         }
         else
